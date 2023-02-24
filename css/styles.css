@@ -211,20 +211,21 @@ body {
 
     min-width: 408px;
     min-height: 576px;
-    padding: 24px;
+    padding: 72px 24px 24px;
 
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
 .btn-modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 24px;
     height: 24px;
-    margin-left: auto;
-    margin-bottom: 24px;
 
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -242,9 +243,6 @@ body {
     border: none;
 }
 
-/* .form {
-    width: 360px;
-} */
 .modal-titel {
     display: block;
     margin-bottom: 16px;
@@ -260,9 +258,10 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 8px;
 }
 .form-label {
-    
     margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.17;
@@ -273,7 +272,6 @@ body {
     letter-spacing: 0.04em;
 }
 .form-input {
-    margin-bottom: 8px;
     padding-left: 38px;
     width: 100%;
     height: 40px;
@@ -281,30 +279,31 @@ body {
     border-radius: 4px;
 
     outline: none;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-icon {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 16px;
-    transform: translateY(-60%);
 
     fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:hover,
 .form-input:focus,
-.footer-input:hover,
-.footer-input:focus {
+.footer-input:focus,
+.comment:focus {
     border: 1px solid var(--accent-color);
 }
-.form-input:hover + .form-icon,
 .form-input:focus + .form-icon {
     fill: var(--accent-color);
+}
+
+.form-field.text-comment {
+    margin-bottom: 16px;
 }
 .comment {
     width: 100%;
     padding: 8px 16px 8px 16px;
-    margin-bottom: 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
